@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keymapHandler"
+version = "0.1.0"
+description = "keymap Handler for ACT Laboratory's GUI"
+authors = [
+    { name = "ACT Laboratory", email = "support@actlab.org" }
+]
+dependencies = [
+    "wxpython==4.2.2",
+]
+requires-python = ">=3.8,<3.13"
+
+[tool.setuptools]
+packages = ["keymapHandler"]
+
+[tool.autopep8]
+aggressive = 2
+ignore = ["E402", "E721"]
+max-line-length = 150
+in-place = true
+recursive = true
+exclude = "venv"
+
+[project.urls]
+Homepage = "https://github.com/actlaboratory/keymapHandler"
+Repository = "https://github.com/actlaboratory/keymapHandler"
