@@ -1,4 +1,4 @@
-# str2key
+# 文字列からwxキーコードへの変換
 #Copyright (C) 2019 Yukio Nozawa <personal@nyanchangames.com>
 #Copyright (C) 2019-2025 yamahubuki <itiro.ishino@gmail.com>
 
@@ -6,7 +6,7 @@
 import wx
 
 
-str2ControlCommand={
+str_to_control_command={
 	#制御キー
 	"CONTROL_A":wx.WXK_CONTROL_A,
 	"CONTROL_B":wx.WXK_CONTROL_B,
@@ -37,14 +37,14 @@ str2ControlCommand={
 }
 
 #マウスボタン
-str2MouseKey={
+str_to_mouse_key={
 	"LBUTTON":wx.WXK_LBUTTON,
 	"MBUTTON":wx.WXK_MBUTTON,
 	"RBUTTON":wx.WXK_RBUTTON
 }
 
 #他の全てのキーの修飾キーとして利用可能
-str2ModifierKey={
+str_to_modifier_key={
 	#修飾キー
 	"ALT":wx.WXK_ALT,
 	"CTRL":wx.WXK_CONTROL,
@@ -54,7 +54,7 @@ str2ModifierKey={
 }
 
 #不明なもの・Windowsでは使えないもの、
-str2UnknownKey={
+str_to_unknown_key={
 	"START":wx.WXK_START,					#Ctrl+ESC
 	"CANCEL":wx.WXK_CANCEL,
 	"MENU":wx.WXK_MENU,
@@ -77,7 +77,7 @@ str2UnknownKey={
 }
 
 #単独でも修飾キーとの組み合わせでも利用可能
-str2FunctionKey={
+str_to_function_key={
 	#ファンクションキー
 	"F1":wx.WXK_F1,
 	"F2":wx.WXK_F2,
@@ -106,7 +106,7 @@ str2FunctionKey={
 }
 
 #文字入力時に利用できない単独キー
-str2InputControlKey={
+str_to_input_control_key={
 	"BACK":wx.WXK_BACK,
 	"SPACE":wx.WXK_SPACE,
 	"DELETE":wx.WXK_DELETE,
@@ -120,7 +120,7 @@ str2InputControlKey={
 }
 
 #主要キー
-str2StandaloneKey={
+str_to_standalone_key={
 	"TAB":wx.WXK_TAB,
 	"RETURN":wx.WXK_RETURN,
 	"ESCAPE":wx.WXK_ESCAPE,
@@ -146,7 +146,7 @@ str2StandaloneKey={
 }
 
 #単独または修飾キーとの組み合わせで利用できる
-str2SpecialKey={
+str_to_special_key={
 	#メディア制御キー
 	"VOLUME_DOWN":wx.WXK_VOLUME_DOWN,
 	"VOLUME_MUTE":wx.WXK_VOLUME_MUTE,
@@ -194,7 +194,7 @@ str2SpecialKey={
 }
 
 #他の修飾キーとの組み合わせで利用できるキー
-str2CharactorKey={
+str_to_character_key={
 	#アルファベットキー
 	"A": ord('A'),
 	"B": ord('B'),
@@ -262,7 +262,7 @@ str2CharactorKey={
 }
 
 #利用不可
-str2categoryKey={
+str_to_category_key={
 	#カテゴリ制御キー
 	"CATEGORY_ARROW":wx.WXK_CATEGORY_ARROW,
 	"CATEGORY_CUT":wx.WXK_CATEGORY_CUT,
@@ -273,7 +273,7 @@ str2categoryKey={
 }
 
 #テンキー関連の内、本来のキーと重複して判定されてしまうキー
-str2numpadKey={
+str_to_numpad_key={
 	"NUMPAD_F1":wx.WXK_NUMPAD_F1,
 	"NUMPAD_F2":wx.WXK_NUMPAD_F2,
 	"NUMPAD_F3":wx.WXK_NUMPAD_F3,
@@ -297,5 +297,5 @@ str2numpadKey={
 	"NUMPAD_ENTER":wx.WXK_NUMPAD_ENTER,
 }
 
-str2key={}
-str2key.update(**str2ControlCommand,**str2MouseKey,**str2ModifierKey,**str2UnknownKey,**str2FunctionKey,**str2InputControlKey,**str2StandaloneKey,**str2SpecialKey,**str2CharactorKey,**str2categoryKey,**str2numpadKey)
+str_to_key={}
+str_to_key.update(**str_to_control_command,**str_to_mouse_key,**str_to_modifier_key,**str_to_unknown_key,**str_to_function_key,**str_to_input_control_key,**str_to_standalone_key,**str_to_special_key,**str_to_character_key,**str_to_category_key,**str_to_numpad_key)
